@@ -31,11 +31,11 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "swiper": "3.0.x",
+    "swiper": "3.3.x",
     "rework-npm-cli": "*"
   },
   "peerDependencies": {
-    "react": "^^0.13.0 || ^0.14.0 || ^15.0.0"
+    "react": "^0.13.0 || ^0.14.0 || ^15.0.0"
   },
   "bugs": {
     "url": "https://github.com/sooth-sayer/react-swiper/issues"
