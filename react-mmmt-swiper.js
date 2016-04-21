@@ -4,6 +4,7 @@
   if (typeof module !== "undefined" && module.exports) {
     module.exports = factory(
       require("react"),
+	  require("react-dom"),
       require("swiper")
     );
   } else {
@@ -12,7 +13,7 @@
       root.Swiper
     );
   }
-})(this, function (React, Swiper) {
+})(this, function (React, ReactDOM, Swiper) {
   var styles = {
     container: {
     },
@@ -38,7 +39,7 @@
 
     componentDidMount: function () {
       if (this.isMounted()) {
-        this.swiper = Swiper(React.findDOMNode(this), this.props);
+        this.swiper = Swiper(ReactDOM.findDOMNode(this), this.props);
         // NOTE: Does not seem that initialSlide works with images
         // NOTE: Lazy loading is also not helped
         var initialSlide = this.props.initialSlide;
