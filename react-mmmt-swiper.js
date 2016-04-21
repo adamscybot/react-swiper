@@ -39,7 +39,9 @@
 
     componentDidMount: function () {
       if (this.isMounted()) {
-        this.swiper = Swiper(ReactDOM.findDOMNode(this), this.props);
+        var props = Object.assign({}, props)
+        delete props.children
+        this.swiper = Swiper(ReactDOM.findDOMNode(this), props);
         // NOTE: Does not seem that initialSlide works with images
         // NOTE: Lazy loading is also not helped
         var initialSlide = this.props.initialSlide;
