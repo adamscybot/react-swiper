@@ -63,7 +63,7 @@
     },
 
     render: function() {
-      return React.createElement("div", React.__spread({}, this.props, {style: styles.container, className: "swiper-container"}),
+      return React.createElement("div", Object.assign({}, this.props, {style: styles.container, className: "swiper-container"}),
         React.createElement("div", {style: styles.wrapper, className: "swiper-wrapper"},
           React.Children.map(this.props.children, function (child) {
             return React.cloneElement(child, { style: styles.child, className: "swiper-slide" });
