@@ -3,7 +3,7 @@
 (function (root, factory) {
   if (typeof module !== "undefined" && module.exports) {
     module.exports = factory(
-      require("react/addons"),
+      require("react"),
       require("swiper")
     );
   } else {
@@ -66,7 +66,7 @@
       return React.createElement("div", React.__spread({}, this.props, {style: styles.container, className: "swiper-container"}),
         React.createElement("div", {style: styles.wrapper, className: "swiper-wrapper"},
           React.Children.map(this.props.children, function (child) {
-            return React.addons.cloneWithProps(child, { style: styles.child, className: "swiper-slide" });
+            return React.cloneWithProps(child, { style: styles.child, className: "swiper-slide" });
           })
         )
       );
