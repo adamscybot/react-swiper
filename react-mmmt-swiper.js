@@ -79,7 +79,7 @@
 			return React.cloneElement(child, { style: Object.assign(child.props.style || {}, styles.child), className: "swiper-slide " + child.props.className });
 		  })
 	    ),
-	    this.props.pagination ? React.cloneElement(this.props.pagination, {className: "swiper-pagination" + (this.props.pagination.className ? ' ' + this.props.pagination.className : ''), ref: "pagination"}) : null]
+	    this.props.pagination ? React.cloneElement(this.props.pagination, {className: "swiper-pagination" + (this.props.pagination.props.className ? ' ' + this.props.pagination.props.className : ''), ref: "pagination"}) : null]
 	  );
 	}
   });
