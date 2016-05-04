@@ -73,8 +73,8 @@
 	},
 
 	render: function() {
-	  return React.createElement('div', Object.assign({}, this.props, {style: styles.container, className: 'swiper-container' + (this.props.className ? ' ' + this.props.className : '')}),
-	    [React.createElement('div', {style: styles.wrapper, className: 'swiper-wrapper'},
+	  return React.createElement('div', Object.assign({}, this.props, {style: styles.container, className: 'swiper-container' + (this.props.className ? ' ' + this.props.className : ''), key: 'swiper'}),
+	    [React.createElement('div', {style: styles.wrapper, className: 'swiper-wrapper', key: 'swiper-wrapper'},
 		  React.Children.map(this.props.children, function (child, index) {
 			return React.cloneElement(child, { style: Object.assign(child.props.style || {}, styles.child), className: 'swiper-slide ' + child.props.className });
 		  })
