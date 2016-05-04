@@ -1,7 +1,7 @@
 {
   "rules": {
-    "no-unused-vars": false,
-    "new-cap": false,
-    "no-underscore-dangle": false
+    "no-unused-vars": 0,
+    "new-cap": 0,
+    "no-underscore-dangle": 0
   }
 }
